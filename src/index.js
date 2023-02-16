@@ -1,14 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import 'index.css';
+import App from 'App';
+import reportWebVitals from 'reportWebVitals';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import About from './pages/About';
-import Error from './Error';
-import Home from './pages/Home';
+import About from 'pages/About';
+import Coffees from 'pages/Coffees';
+import Error from 'Error';
+import Home from 'pages/Home';
+import Listicles from 'pages/Listicles';
+import TvShows from 'pages/TvShows';
+import Writers from 'pages/Writers';
 
 const router = createBrowserRouter([
 	{
@@ -18,7 +22,11 @@ const router = createBrowserRouter([
 		children: [
 			{ path: '/', element: <Home /> },
 			{ path: '/About', element: <About /> },
+			{ path: '/Coffee', element: <Coffees /> },
 			{ path: '/Home', element: <Home /> },
+			{ path: '/Listicles', element: <Listicles /> },
+			{ path: '/TV-Shows', element: <TvShows /> },
+			{ path: '/Writers', element: <Writers /> },
 		],
 	},
 ]);
