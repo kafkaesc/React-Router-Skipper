@@ -19,7 +19,7 @@ export default function Writers() {
 			<H1>Writers</H1>
 			<ul>
 				{writers.map((wr) => (
-					<li>{wr.name}</li>
+					<li key={wr.name.replace(' ', '-').toLowerCase()}>{wr.name}</li>
 				))}
 			</ul>
 		</SiteNavigation>

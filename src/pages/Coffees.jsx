@@ -15,7 +15,7 @@ export default function Coffees() {
 			<H1>Coffees</H1>
 			<ul>
 				{coffees.map((co) => (
-					<li>{co.title}</li>
+					<li key={co.title.replace(' ', '-').toLowerCase()}>{co.title}</li>
 				))}
 			</ul>
 		</SiteNavigation>

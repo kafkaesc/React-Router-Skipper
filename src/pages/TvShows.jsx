@@ -16,7 +16,7 @@ export default function TvShows() {
 			<H1>TV Shows</H1>
 			<ul>
 				{tvShows.map((ts) => (
-					<li>{ts.title}</li>
+					<li key={ts.title.replace(' ', '-').toLowerCase()}>{ts.title}</li>
 				))}
 			</ul>
 		</SiteNavigation>

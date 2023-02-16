@@ -38,7 +38,7 @@ export default function Listicles() {
 			</H1>
 			<ul>
 				{listicles.map((li) => (
-					<li>{li.title}</li>
+					<li key={li.title.replace(' ', '-').toLowerCase()}>{li.title}</li>
 				))}
 			</ul>
 		</SiteNavigation>
