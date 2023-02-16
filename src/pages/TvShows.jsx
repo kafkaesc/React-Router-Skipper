@@ -1,4 +1,5 @@
 import H1 from 'elements/H1';
+import P from 'elements/P';
 
 import SiteNavigation from 'layout/SiteNavigation';
 
@@ -14,11 +15,14 @@ export default function TvShows() {
 	return (
 		<SiteNavigation>
 			<H1>TV Shows</H1>
-			<ul>
-				{tvShows.map((ts) => (
-					<li key={ts.title.replace(' ', '-').toLowerCase()}>{ts.title}</li>
-				))}
-			</ul>
+			{tvShows.length === 0 && <P>No TV show data to show.</P>}
+			{tvShows && tvShows.length > 0 && (
+				<ul>
+					{tvShows.map((ts) => (
+						<li key={ts.title.replace(' ', '-').toLowerCase()}>{ts.title}</li>
+					))}
+				</ul>
+			)}
 		</SiteNavigation>
 	);
 }

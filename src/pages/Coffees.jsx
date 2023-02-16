@@ -1,4 +1,5 @@
 import H1 from 'elements/H1';
+import P from 'elements/P';
 
 import SiteNavigation from 'layout/SiteNavigation';
 
@@ -13,11 +14,14 @@ export default function Coffees() {
 	return (
 		<SiteNavigation>
 			<H1>Coffees</H1>
-			<ul>
-				{coffees.map((co) => (
-					<li key={co.title.replace(' ', '-').toLowerCase()}>{co.title}</li>
-				))}
-			</ul>
+			{coffees.length === 0 && <P>No coffee data to show.</P>}
+			{coffees && coffees.length > 0 && (
+				<ul>
+					{coffees.map((co) => (
+						<li key={co.title.replace(' ', '-').toLowerCase()}>{co.title}</li>
+					))}
+				</ul>
+			)}
 		</SiteNavigation>
 	);
 }

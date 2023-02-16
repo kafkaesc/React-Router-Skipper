@@ -1,4 +1,5 @@
 import H1 from 'elements/H1';
+import P from 'elements/P';
 
 import SiteNavigation from 'layout/SiteNavigation';
 
@@ -36,11 +37,14 @@ export default function Listicles() {
 			<H1>
 				4 Listicles You Won't Want to Miss (Number 4 Will Throw You for a Loop)
 			</H1>
-			<ul>
-				{listicles.map((li) => (
-					<li key={li.title.replace(' ', '-').toLowerCase()}>{li.title}</li>
-				))}
-			</ul>
+			{listicles.length === 0 && <P>No listicles to show</P>}
+			{listicles && listicles.length > 0 && (
+				<ol className="list-decimal list-inside">
+					{listicles.map((li) => (
+						<li key={li.title.replace(' ', '-').toLowerCase()}>{li.title}</li>
+					))}
+				</ol>
+			)}
 		</SiteNavigation>
 	);
 }
