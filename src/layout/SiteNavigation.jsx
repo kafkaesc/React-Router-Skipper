@@ -12,7 +12,7 @@ export default function SiteNavigation({ fullWidth, ...props }) {
 					<SkipToMain />
 					<ul>
 						<NavigationItem to="/Home">Home</NavigationItem>
-						<NavigationItem to="/Coffee">Coffees</NavigationItem>
+						<NavigationItem to="/Coffee">Coffee</NavigationItem>
 						<NavigationItem to="/Listicles">Listicles</NavigationItem>
 						<NavigationItem to="/TV-Shows">TV Shows</NavigationItem>
 						<NavigationItem to="/Writers">Writers</NavigationItem>

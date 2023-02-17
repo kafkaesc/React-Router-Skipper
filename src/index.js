@@ -7,11 +7,14 @@ import reportWebVitals from 'reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import About from 'pages/About';
+import Coffee from 'pages/Coffee';
 import Coffees from 'pages/Coffees';
 import Error from 'Error';
 import Home from 'pages/Home';
 import Listicles from 'pages/Listicles';
+import TvShow from 'pages/TvShow';
 import TvShows from 'pages/TvShows';
+import Writer from 'pages/Writer';
 import Writers from 'pages/Writers';
 
 const router = createBrowserRouter([
@@ -23,9 +26,12 @@ const router = createBrowserRouter([
 			{ path: '/', element: <Home /> },
 			{ path: '/About', element: <About /> },
 			{ path: '/Coffee', element: <Coffees /> },
+			{ path: '/Coffee/:coffeeName', element: <Coffee /> },
 			{ path: '/Home', element: <Home /> },
 			{ path: '/Listicles', element: <Listicles /> },
 			{ path: '/TV-Shows', element: <TvShows /> },
+			{ path: '/TV-Shows/:tvShowName', element: <TvShow /> },
+			{ path: '/Writers/:writerName', element: <Writer /> },
 			{ path: '/Writers', element: <Writers /> },
 		],
 	},

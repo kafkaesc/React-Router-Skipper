@@ -1,4 +1,5 @@
 import H1 from 'elements/H1';
+import Link from 'elements/Link';
 import P from 'elements/P';
 
 import SiteNavigation from 'layout/SiteNavigation';
@@ -19,7 +20,11 @@ export default function TvShows() {
 			{tvShows && tvShows.length > 0 && (
 				<ul>
 					{tvShows.map((ts) => (
-						<li key={ts.title.replace(' ', '-').toLowerCase()}>{ts.title}</li>
+						<li key={ts.title.replace(' ', '-').toLowerCase()}>
+							<Link to={`/TV-Shows/${ts.title.replace(' ', '-')}`}>
+								{ts.title}
+							</Link>
+						</li>
 					))}
 				</ul>
 			)}

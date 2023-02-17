@@ -1,4 +1,5 @@
 import H1 from 'elements/H1';
+import Link from 'elements/Link';
 import P from 'elements/P';
 
 import SiteNavigation from 'layout/SiteNavigation';
@@ -18,7 +19,11 @@ export default function Coffees() {
 			{coffees && coffees.length > 0 && (
 				<ul>
 					{coffees.map((co) => (
-						<li key={co.title.replace(' ', '-').toLowerCase()}>{co.title}</li>
+						<li key={co.title.replace(/ /g, '-').toLowerCase()}>
+							<Link to={`/Coffee/${co.title.replace(/ /g, '-')}`}>
+								{co.title}
+							</Link>
+						</li>
 					))}
 				</ul>
 			)}
