@@ -20,10 +20,10 @@ export default function SiteNavigation({ fullWidth, ...props }) {
 					</ul>
 				</nav>
 			</div>
-			<div
-				className={`p-2 w-full md:overflow-y-auto md:transition md:duration-300`}
-			>
-				<div className={`${widthClass}`}>{props.children}</div>
+			<div className={`p-2 w-full md:overflow-y-auto`}>
+				<div className={`${widthClass}`} id="MainContent">
+					{props.children}
+				</div>
 			</div>
 		</div>
 	);
