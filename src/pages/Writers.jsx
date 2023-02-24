@@ -6,6 +6,13 @@ import SiteNavigation from 'layout/SiteNavigation';
 
 const writers = [
 	{
+		birthDate: '1956-10-',
+		img: '',
+		name: 'Katherine Applegate',
+		personalWebsite: 'https://katherineapplegate.com',
+		wikipediaLink: 'https://en.wikipedia.org/wiki/Katherine_Applegate',
+	},
+	{
 		birthDate: '1954-12-20',
 		img: '',
 		name: 'Sandra Cisneros',
